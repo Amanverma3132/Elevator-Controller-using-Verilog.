@@ -25,7 +25,7 @@ The controller uses four states:
 3. **MOVE DOWN** – The elevator moves to a lower floor.
 4. **EMERGENCY** – The elevator stops when the emergency signal is activated.
 
-![Elevator Controller State Diagram](Elevator Controller State Diagram.png)
+![Elevator Controller State Diagram](state_diagram.png)
 
 ## FSM State Encoding
 
@@ -72,7 +72,7 @@ The controller uses four states:
 
 | File | Description |
 |---|---|
-| `lift_controller.v` | Main Verilog module implementing the elevator controller |
+| `controller.v` | Main Verilog module implementing the elevator controller |
 | `tb_controller.v` | Testbench used to verify the controller |
 | `state_diagram.png` | FSM state diagram |
 
@@ -92,7 +92,7 @@ The testbench can be used to verify the following scenarios:
 1. Open the project in a Verilog simulator such as **ModelSim, QuestaSim, or Icarus Verilog**.
 2. Add `controller.v` and `tb_controller.v` to the project.
 3. Compile both files.
-4. Set `tb_controller` as the top-level simulation module.
+4. Set `tb_lift_controller` as the top-level simulation module.
 5. Run the simulation and observe the output signals in the console or waveform viewer.
 
 ### Example Using Icarus Verilog
@@ -100,7 +100,7 @@ The testbench can be used to verify the following scenarios:
 Compile the files:
 
 ```bash
-iverilog -o elevator_sim lift_controller.v tb_controller.v
+iverilog -o elevator_sim controller.v tb_controller.v
 ```
 
 Run the simulation:
@@ -138,5 +138,5 @@ To view waveforms, add `$dumpfile` and `$dumpvars` to the testbench, then open t
 
 This project is intended for educational purposes and simulation practice. It is not designed or verified for use in a real elevator safety system.
 
-**Your Name**
+
 
