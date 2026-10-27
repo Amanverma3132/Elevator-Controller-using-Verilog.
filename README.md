@@ -4,6 +4,13 @@ Four-floor elevator controller using Verilog HDL and finite state machine (FSM),
 ## Overview
 This project implements a four-floor elevator controller using Verilog HDL and a Finite State Machine (FSM). It controls elevator movement based on floor requests and supports an emergency stop feature.
 
+## State Diagram
+
+The elevator controller uses a Finite State Machine (FSM) with four states: Idle, Move Up, Move Down, and Emergency.
+
+![Elevator Controller State Diagram](Elevator Controller State Diagram.png)
+
+
 ## Features
 - Four-floor operation (Floor 0 to Floor 3)
 - FSM-based control with Idle, Move Up, Move Down, and Emergency states
